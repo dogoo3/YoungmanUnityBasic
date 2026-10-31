@@ -1,0 +1,52 @@
+{
+    "version": 1,
+    "name": "Chp3Action",
+    "maps": [
+        {
+            "name": "MOVE",
+            "id": "96fda18b-da0d-45d7-97d3-0d6a43b513ce",
+            "actions": [
+                {
+                    "name": "CheckObject",
+                    "type": "PassThrough",
+                    "id": "552ae74c-4354-409d-b62e-4f9b7d3d2219",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "14f3cf48-180f-43be-93ba-89e6572ea054",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CheckObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
