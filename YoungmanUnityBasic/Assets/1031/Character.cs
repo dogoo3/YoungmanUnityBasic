@@ -18,12 +18,6 @@ public class Character : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    // 마우스 클릭
-    private void OnCheck(InputValue inputvalue)
-    {
-        Debug.Log($"클릭 입력 : ${inputvalue.isPressed}");
-    }
-
     private void OnJump(InputValue inputvalue)
     {
         if(inputvalue.isPressed)
@@ -48,6 +42,33 @@ public class Character : MonoBehaviour
     private void OnShoot(InputValue inputvalue)
     {
         Instantiate(bulletPrefab, shootTransform.position, Quaternion.identity); // (오브젝트 프리팹, 생성 위치, 생성되는 오브젝트 회전값)
+    }
+
+    private void OnShootRay(InputValue inputvalue)
+    {
+        //Ray ray = new Ray(shootTransform.position, transform.forward); // 광선 그 자체
+
+        //RaycastHit hit; // 맞았을 때 맞은 오브젝트&광선과 관련된 무언가
+
+        //Debug.DrawRay(shootTransform.position, transform.forward * 10.0f, Color.blue, 2.0f);
+
+        //int layermask_test = 1 << LayerMask.NameToLayer("Test"); // Test라는 Layer를 가진 친구만 감지
+        //int layermask_water = 1 << LayerMask.NameToLayer("Water"); // Water라는 "
+
+        //if(Physics.Raycast(ray, out hit, 10.0f, layermask_test | layermask_water))
+        //{
+        //    Debug.Log(hit.collider.name);
+        //}
+
+        // 게임화면 정중앙에서 Ray 쏘는 법
+        Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
+        Debug.Log(new Vector2(Screen.width / 2, Screen.height / 2));
+
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 20.0f))
+        {
+            Debug.Log(hit.collider.name);
+        }
     }
 
     private void Update()

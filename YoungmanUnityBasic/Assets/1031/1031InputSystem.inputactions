@@ -37,9 +37,9 @@
                     "priority": 0
                 },
                 {
-                    "name": "Check",
-                    "type": "PassThrough",
-                    "id": "f65ac509-aa9c-448d-9fca-8caf6aad5f9e",
+                    "name": "ShootRay",
+                    "type": "Button",
+                    "id": "da83864d-02b9-4345-918c-1aa3593557e4",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -149,12 +149,12 @@
                 },
                 {
                     "name": "",
-                    "id": "1a6db6e1-5dc6-4e97-a4f5-e2860ae2367e",
-                    "path": "<Mouse>/leftButton",
+                    "id": "77383264-7f53-433b-996f-e66cd50164e1",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Check",
+                    "action": "ShootRay",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
